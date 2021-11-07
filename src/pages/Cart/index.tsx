@@ -1,10 +1,8 @@
-import React from 'react';
 import {
   MdDelete,
   MdAddCircleOutline,
   MdRemoveCircleOutline,
 } from 'react-icons/md';
-import { format } from 'util';
 
 import { useCart } from '../../hooks/useCart';
 import { formatPrice } from '../../util/format';
@@ -70,7 +68,7 @@ const Cart = (): JSX.Element => {
           {
             cartFormatted.map((product, i) => {
               return (
-                <tr key={`${i}-${product.id}@${product.amount}`} data-testid="product">
+                <tr key={product.id} data-testid="product">
                   <td>
                     <img src={product.image} alt={product.title}/>
                   </td>

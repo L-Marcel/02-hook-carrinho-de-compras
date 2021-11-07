@@ -89,7 +89,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       if(cart.length === _cart.length) {
         throw new Error("Produto não existe");
       };
-
+      
       setCart([ ..._cart ]);
 
       updateStorage(_cart);
